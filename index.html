@@ -1,0 +1,119 @@
+<!DOCTYPE html> <!--Przy HTML by rozpocząć tworzenie strony wystarczy zacząć od wpisania samego wykrzyknika-->
+
+<html lang="pl">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREEN VETRO</title> <!--Tytuł zakładki w przeglądarce-->
+
+    <link rel="stylesheet" href="styles.css"> <!--tag odpowiedzialny za załadowanie pliku CSS-->
+
+</head>
+
+<body> <!--body to obczar na uzupełnienie treści strony-->
+    
+    <header> <!--służy grupowaniu elementów, np. by nadać im tło-->
+        <h1>GREEN VETRO</h1> <!--Nagłówki h pogrubiają tekst w zależności od wartości 1,2,3 itd.-->
+        <a href="kontakt.html">Kontakt</a> <!-- <a href="https://www.google.com">Znajdź w google!</a> -->
+        <br> <!--Linijka odstępu-->
+    </header>
+    
+    <br>
+    <br>
+    <br>
+
+    <article> <!--służy grupowaniu elementów, np. by nadać im tło-->
+        <h3>PIERWSZY WPIS</h3> <!--Nagłówek-->
+        <p>Tworzenie stron internetowych</p> <!--p = Klasyczny tekst--> 
+        <p><mark>Pisanie strony w HTML</mark></p> <!--mark = zaznaczenie tekstu na żółto-->
+        <p><i>Wprowadzanie zajęć praktycznych</i></p> <!--i=kursywa-->
+    </article>
+    
+    <article> <!--służy grupowaniu elementów, np. by nadać im tło-->
+        <h3>DRUGI WPIS</h3>
+        <p><b>Tworzenie stron internetowych</b></p> <!--b=pogrubienie-->
+        <p><sup>Pisanie</sup> strony w HTML</p> <!--sup podwyższa tekst-->
+        <p><small>Wprowadzanie</small> zajęć praktycznych</p> <!--small pomniejsza tekst-->
+    </article>
+
+    <br>
+    <br>
+    <br>
+
+    <div>
+        Moje umiejętrności 
+        <ul> <!--LISTA NIEUPORZĄDKOWANA-->
+            <li>Znam HTML</li> <!--Punkty-->
+            <li>Nie znam jeszcze CSS</li>
+        </ul>
+        
+        <ol> <!--LISTA UPORZĄDKOWANA-->
+            <li>Znam HTML</li>
+            <li>Nie znam jeszcze CSS</li>
+        </ol>
+
+        <table> <!--TABLE=TABELA--> <!--TR WIESZ; TD KOLUMNA; TH NAGŁÓWEK-->
+
+            <tr>
+                <th>Umiejętność</th>
+                <th>Poziom</th>
+            </tr>
+            <tr>
+                <td>HTML</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>1</td>
+            </tr>
+
+        </table>
+
+        <br>
+        <br>
+        <br>
+
+        <table border="1"> <!-- BORDER TO OBRAMOWANIE -->
+
+            <tr>
+                <th>Umiejętność</th>
+                <th>Poziom</th>
+            </tr>
+            <tr>
+                <td>HTML</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>1</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div>Tekst z <strong>pogrubionym</strong> słowem i drugim <b>pogrubionym</b> słowem</div> <!--STRONG może pogrubić wybraną część zdania--> <!--b również może to zrobić-->
+
+    <br>
+    <br>
+    <br>
+
+    <footer> <!--stopka-->
+
+        <div><i><small> &copy; Prawa&nbsp;autorskie</small></i></div> <!--copy symbole nazywają się HTLM ENTITIES-->
+        <p><sup class="sup_element">*</sup></p> <!--class służy klasyfikowaniu/identyfikowaniu grupy oznaczonych w ten sam sposób elementów-->
+        <p class="kolorek" style="color:red">czerwony</p> <!--style color nadaje kolor tekstu-->
+
+    </footer>
+    
+    <script src="scripts.js"></script> <!--tag odpowiedzialny za załadowanie pliku JAVA-->
+
+</body>
+</html>
