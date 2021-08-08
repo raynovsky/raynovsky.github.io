@@ -1,0 +1,208 @@
+body { /* zastosowanie czcionki do tagu body */
+    font-family: 'Roboto';
+    font-size: 22px; 
+    /* margin-left: 100px; (odsunięcie od krawędzi)
+    margin-top: 100px; (odsunięcie od krawędzi) */
+    /* background-image: url("https://fripers.pl/blog/wp-content/uploads/2019/10/bl-01.jpg"); (Tło strony) */
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1.3px;
+}
+
+table { /* selector - zamiast td można użyć table, by wyśrodkować całą tabelę razem z nagłówkiem */
+
+    /* text-align: center; property: value; */
+    line-height: 200%; /* wysokość komórki */
+    width: 300px; /* szerokość tabeli */
+    height: 200px; /* wysokość tabeli */
+    /* border: 1px solid black; (obramowanie) */
+    /* border-collapse: collapse; */
+    /* Powyższe wyśrodkowało tekst z tabeli */
+    border-top: 5px solid #FFDAB9;
+    color: #FFDAB9;
+    font-weight: bold;
+} 
+
+table th {
+    text-align: left;
+    color: #FA8072;
+}
+
+h1 {
+    color: #002366;
+}
+
+h3 {
+    color: #002366;
+    font-size: 34px;
+    font-weight: 900;
+    margin: 0;
+}
+
+p {
+    color: #FFDAB9;
+    font-weight: bold;
+    margin: 0;
+    /* font-weight: bold; (pogrubienie) */
+}
+
+.kolorek { /* odniesienie się do ustalonej w html klasy */
+    color: red;
+}
+
+div strong {
+    text-decoration: underline #FF66CE; /*podkreślenie; underline wavy podkreślenie faliste; można dodać kolor*/
+}
+
+
+mark {
+    border-radius: 10px; /*zaokrąglenie rogów*/
+}
+
+div#main-content {
+    background-color: #002366;
+    padding-left: 30px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    /* padding: 20px; (padding bez oznaczenia kierunku po myślniku stosuje odstęp z każdej strony)*/
+    /* border-style: solid; obramowanie*/
+    display: flex;
+    /* display:flex - ustawienie zawartości header obok siebie */
+    /* flex-direction:column; - ustawienie wszystkiego w jednej kolumnie */
+    /* flex-direction:row-reverse; - ustawienie zawartości odwrotnie*/
+    /* flex-wrap:nowrap; - zawijanie zawartości do kolumn */
+    /* flex-wrap:wrap; - zawijanie zawartości wierszy */
+    /* justify-content: center; justify-content: space-around; itd. - funkcje ułożenia zawartości, szczegóły w google */
+}
+
+* {
+    box-sizing: border-box; /*wyrównanie szerokości boxów (obramowań) */
+}
+
+a {
+    color: #0F52BA;
+}
+
+a:hover { /*a - kolor linku; a:hover - zmiana koloru linku przy najechaniu na niego*/
+    color: #FF66CE;
+}
+
+
+table tr:first-child { /* pierwszy tag tr */
+    color: #FFDAB9;
+}
+
+header {
+    display: flex;
+    /* display:flex - ustawienie zawartości header obok siebie */
+    justify-content: space-between;
+    /* justify-content: space-between - zrobienie miejsca między zawartościami */
+    padding: 30px;
+    align-items: center;
+    background-color: #FFDAB9;
+    /* background-image: linear-gradient(45deg, #EBF9FF, #FFF7F6); (gradient w tle) */
+}
+
+article {
+    margin-bottom: 80px;
+}
+
+#articles {
+    flex-grow: 1;
+    /* flex-grow - tworzenie przestrzeni między zawartościami wg flex grow - wartości można znaleźć na google*/
+}
+
+#tabeleczka {
+    flex-grow: 1;
+    align-self: center;
+    /* align-self: center; - wyśrodkowanie tabeli; wartości można znaleźć w google*/
+}
+
+footer {
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    background-color: #0F52BA;
+    color: #FFDAB9;
+    /*text-align:center; by wyśrodkować sekcje footer i width 100% by skalowało środkowanie w stosunku do całej strony*/
+}
+
+@media screen and (min-width: 600px) {
+    footer {
+        position: fixed;
+    }
+    /*funkcja służy temu, by 'footer' na urządzeniach poniżej wskazanej szerokości nie pojawiał się*/
+}
+
+@media screen and (max-width: 600px) {
+    div#main-content, header {
+        flex-direction: column;
+    }
+    /*funkcja służy temu, by wskazane pola układały się w kolumnie i nie nakładały na siebie na urządzeniach mobilnych*/
+}
+
+/*
+
+footer div {  (odniesienie się do tagu, który jest w innym tagu)
+    color: gray;
+}
+
+p {
+    color: green;
+    font-weight: bold;
+    /* text-indent: 50px; - przesunięcie tekstu
+}
+
+body {
+    color: gray;
+} (wprowadzenie koloru dla całego obszaru body w html; nie działa na kolor ustalony wewnętrznie w html)
+
+między tagiem i tagiem wskazanym jako wewnętrznym możey wpisać ">" - jest to symbol dziecka i obejmie tylko te tagi, które znajdują się bezpośrenio pod tagiem, który wskażemy jako główny
+
+p.kolorek { (odniesienie się do tagu p z ustaloną klasą kolorek)
+    color: red;
+}
+
+h3, p {
+    color: #FC7629;
+} (Ustalenie koloru dla kilku elementów na raz)
+
+.first-class {
+    color: red;
+}
+
+h1 {
+    color: green;
+}
+
+.third-class {
+    color: red !important; - important - najwyższy priorytet 
+}
+
+#first-id {
+    color: blue;
+} */
+
+/* div:hover { / hover - można stosować do dowolnego elementu /
+    color: #FF66CE;
+}
+
+span {
+    display:block; (w ten sposób można liniowy element span zamienić na blokowy)
+}
+
+header a {
+    float: right;
+} (przesunięcie tekstu w <a> w tagu header na prawo)
+
+header h1 {
+    float: left;
+}
+
+#articles {
+    padding: 30px;
+    padding-right: 100px;
+    float: left; (po to by tabela wskoczyła na prawo od artykułów)
+} */

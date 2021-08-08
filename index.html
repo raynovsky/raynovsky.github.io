@@ -9,54 +9,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GREEN VETRO</title> <!--Tytuł zakładki w przeglądarce-->
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto"> <!--Dodanie czcionki przez link-->
+
     <link rel="stylesheet" href="styles.css"> <!--tag odpowiedzialny za załadowanie pliku CSS-->
+
+    <style> /* wprowadzeie stylu w head ma większy priorytet niż CSS, ale mniejszy niż wartości podane bezpośrednio w body */
+        h3 {
+            color:blueviolet;
+        }
+    </style>
 
 </head>
 
 <body> <!--body to obczar na uzupełnienie treści strony-->
+
+    <!-- <div class="first-class">
+        <div class="secon-class">
+            <h1 style="color: green; id="first-id" class="third-class">TEXT</h1>
+        </div>
+    </div> -->
     
     <header> <!--służy grupowaniu elementów, np. by nadać im tło-->
-        <h1>GREEN VETRO</h1> <!--Nagłówki h pogrubiają tekst w zależności od wartości 1,2,3 itd.-->
-        <a href="kontakt.html">Kontakt</a> <!-- <a href="https://www.google.com">Znajdź w google!</a> -->
-        <br> <!--Linijka odstępu-->
+        <h1>GREEN VETRO</h1> 
+        <!--Nagłówki h pogrubiają tekst w zależności od wartości 1,2,3 itd.-->
+        <a href="kontakt.html">Kontakt</a> 
+        <!-- <a href="https://www.google.com">Znajdź w google!</a> -->
     </header>
     
-    <br>
-    <br>
-    <br>
+    <!-- 
+    <div style="clear: both;"></div> (oddzielenie elementów, by nie opływały tekstu przy float)
+    -->
 
-    <article> <!--służy grupowaniu elementów, np. by nadać im tło-->
-        <h3>PIERWSZY WPIS</h3> <!--Nagłówek-->
-        <p>Tworzenie stron internetowych</p> <!--p = Klasyczny tekst--> 
-        <p><mark>Pisanie strony w HTML</mark></p> <!--mark = zaznaczenie tekstu na żółto-->
-        <p><i>Wprowadzanie zajęć praktycznych</i></p> <!--i=kursywa-->
-    </article>
-    
-    <article> <!--służy grupowaniu elementów, np. by nadać im tło-->
-        <h3>DRUGI WPIS</h3>
-        <p><b>Tworzenie stron internetowych</b></p> <!--b=pogrubienie-->
-        <p><sup>Pisanie</sup> strony w HTML</p> <!--sup podwyższa tekst-->
-        <p><small>Wprowadzanie</small> zajęć praktycznych</p> <!--small pomniejsza tekst-->
-    </article>
-
-    <br>
-    <br>
-    <br>
-
-    <div>
-        Moje umiejętrności 
-        <ul> <!--LISTA NIEUPORZĄDKOWANA-->
-            <li>Znam HTML</li> <!--Punkty-->
-            <li>Nie znam jeszcze CSS</li>
-        </ul>
+    <div id="main-content"> <!--oznaczenie pola-->
         
-        <ol> <!--LISTA UPORZĄDKOWANA-->
+        <section id="articles">
+    
+            <article> 
+                <!-- <article style="border: 1px solid black; padding-left: 30px;"></article> służy grupowaniu elementów, np. by nadać im tło--> <!--border to obramowanie; padding to odsunięcie tekstu od krawędzi obramowania -->
+                <h3 style=color:#FA8072;>PIERWSZY WPIS</h3> <!--Nagłówek-->
+                <p>Tworzenie stron internetowych</p> 
+                <!-- <p> = Klasyczny tekst--> 
+                <!-- <mark> = zaznaczenie tekstu na żółto-->
+                <!-- <i> =kursywa-->
+            </article>
+
+            <article> 
+                <!--służy grupowaniu elementów, np. by nadać im tło-->
+                <h3 style=color:#FA8072;>DRUGI WPIS</h3>
+                <!-- <b> = pogrubienie -->
+                <p>Pisanie strony w HTML</p> 
+                <!-- <sup> podwyższa tekst mniej więcej jak pierwiastek -->
+                <!-- <small> = pomniejsza tekst-->
+            </article>
+
+            <article> 
+                <!--służy grupowaniu elementów, np. by nadać im tło-->
+                <h3 style=color:#FA8072;>TRZECI WPIS</h3>
+                <!-- <p style="border: 1px solid black; padding: 30px; margin-bottom: 20px; width: 180px;"><b>Tworzenie stron internetowych</b></p> (b=pogrubienie) -->
+                <p>Nauka CSS i JAVA</p>
+                <p>Wprowadzaniezajęć praktycznych</p>
+            </article>
+
+        </section>
+    
+            <!-- Moje umiejętrności 
+            <ul> (LISTA NIEUPORZĄDKOWANA)
+            <li>Znam HTML</li> (Punkty)
+            <li>Nie znam jeszcze CSS</li>
+            </ul>
+        
+            <ol> (LISTA UPORZĄDKOWANA)
             <li>Znam HTML</li>
             <li>Nie znam jeszcze CSS</li>
-        </ol>
-
-        <table> <!--TABLE=TABELA--> <!--TR WIESZ; TD KOLUMNA; TH NAGŁÓWEK-->
-
+            </ol> -->
+    
+            <!-- <table> TABLE=TABELA; TR WIESZ; TD KOLUMNA; TH NAGŁÓWEK
+    
             <tr>
                 <th>Umiejętność</th>
                 <th>Poziom</th>
@@ -69,47 +97,64 @@
                 <td>CSS</td>
                 <td>1</td>
             </tr>
+    
+            </table> -->
+    
+            <div id="tabeleczka">
 
-        </table>
+                <b style="font-size: 34px; font-weight: 900; color: #FA8072;">My skills</b>
 
-        <br>
-        <br>
-        <br>
+                <table> 
+                    <!-- BORDER="1" TO OBRAMOWANIE -->
+        
+                <tr>
+                    <th>Umiejętność</th>
+                    <th>Poziom</th>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>3</td>
+                </tr>
+        
+                </table>
 
-        <table border="1"> <!-- BORDER TO OBRAMOWANIE -->
+            </div>
+    
 
-            <tr>
-                <th>Umiejętność</th>
-                <th>Poziom</th>
-            </tr>
-            <tr>
-                <td>HTML</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <td>CSS</td>
-                <td>1</td>
-            </tr>
+    </div> 
 
-        </table>
-
-    </div>
-
-    <br>
-    <br>
-    <br>
-
-    <div>Tekst z <strong>pogrubionym</strong> słowem i drugim <b>pogrubionym</b> słowem</div> <!--STRONG może pogrubić wybraną część zdania--> <!--b również może to zrobić-->
-
-    <br>
-    <br>
-    <br>
+    <!-- <div>Tekst z <strong>pogrubionym</strong> słowem i drugim <b>pogrubionym</b> słowem</div> (STRONG może pogrubić wybraną część zdania) (b również może to zrobić) -->
 
     <footer> <!--stopka-->
 
-        <div><i><small> &copy; Prawa&nbsp;autorskie</small></i></div> <!--copy symbole nazywają się HTLM ENTITIES-->
-        <p><sup class="sup_element">*</sup></p> <!--class służy klasyfikowaniu/identyfikowaniu grupy oznaczonych w ten sam sposób elementów-->
-        <p class="kolorek" style="color:red">czerwony</p> <!--style color nadaje kolor tekstu-->
+        <div>
+
+        <!--
+            style="position: relative; position: absolute; position:fixed; right: 20px; bottom: 0;"
+        -->
+
+        <!--styl position: relative;left/right pozycjonuje względem pozycji, w której element aktualnie się znajduje-->
+
+        <!--styl position: absolute pozycjonuje względem rodzica; footer nie jest pozycjonowany, więc element pozycjonuje się względem body-->
+
+        <!--styl position: fixed z bottom: 0; blokuje element w prawym dolnym rogu tak, by był zawsze widoczny przy scrollowaniu lub powiększaniu strony; inaczej dolny margines zawsze ma wynosić 0-->
+
+            <i><small> &copy; Prawa&nbsp;autorskie</small></i>
+
+        </div> 
+
+        <!--copy symbole nazywają się HTLM ENTITIES-->
+
+        <!--
+        <p><sup class="kolorek">*</sup></p> 
+        (class służy klasyfikowaniu/identyfikowaniu grupy oznaczonych w ten sam sposób elementów)
+        <p class="kolorek">czerwony</p> 
+        (style color nadaje kolor tekstu)
+        -->
 
     </footer>
     
